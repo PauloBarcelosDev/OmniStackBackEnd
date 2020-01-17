@@ -79,6 +79,7 @@ module.exports = {
           } 
       } ,
  async delete(req,res){
-
+      const dev = await Dev.findByIdAndDelete({_id: req.params.id});
+      return res.json("Deletado com sucesso@");
  }
  }
