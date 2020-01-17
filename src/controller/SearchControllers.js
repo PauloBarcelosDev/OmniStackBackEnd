@@ -7,8 +7,6 @@ module.exports = {
     const { latitude, longitude, techs } = req.query;
 
     const techsArray = parseStringAsArray(techs);
-    console.log (techsArray);
-
      const devs = await Dev.find({
       techs: {
         $in: techsArray,
@@ -25,8 +23,6 @@ module.exports = {
        
       
     });
-    console.log ("valor de devs: ",devs);
-
     return res.json({devs});
   }
 }
