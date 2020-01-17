@@ -6,6 +6,6 @@ const routes =  Router();
 routes.get('/devs',DevController.index);
 routes.post('/devs',DevController.store);
 
-routes.get('/devs/search',SeachController.index);
+routes.get('/search',SeachController.index);
 
 module.exports = routes;
